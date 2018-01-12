@@ -1,0 +1,30 @@
+spring:
+  data:
+    mongodb:
+      uri:
+        mongodb://localhost:27017
+      database:
+        config
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: password
+      username: user
+
+server:
+  port: 10001
+
+
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10     # 心跳间隔（秒），默认30s
+    leaseExpirationDurationInSeconds: 30  # 失效时间，默认90s，如果服务在指定的 失效时间 内仍没有发起心跳请求，将会被剔除EurekaServer
+    prefer-ip-address: true               # 实例名称显示IP配置（与instance-id配合使用）
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}  # 将InstanceID设置为 IP:Port 形式
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+    healthcheck:
+      enable: true     # 将 actuator health中的健康状态传播到Eureka Server

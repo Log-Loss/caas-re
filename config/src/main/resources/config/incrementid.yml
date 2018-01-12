@@ -1,0 +1,18 @@
+spring:
+  data:
+    mongodb:
+      uri:
+        mongodb://localhost:27017
+      database:
+        id
+
+spring:
+  data:
+    mongodb:
+      uri:
+        mongodb://localhost:27017
+      database:
+        id
+
+server:
+  port: 10005

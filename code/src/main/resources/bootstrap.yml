@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: code
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: password
+      username: user
+  boot:
+    admin:
+      url: http://localhost:8090

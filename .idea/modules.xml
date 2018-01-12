@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/admin-server/admin-server.iml" filepath="$PROJECT_DIR$/admin-server/admin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/caas.iml" filepath="$PROJECT_DIR$/caas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/code.iml" filepath="$PROJECT_DIR$/code/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataset/dataset.iml" filepath="$PROJECT_DIR$/dataset/dataset.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/increment-id/increment-id.iml" filepath="$PROJECT_DIR$/increment-id/increment-id.iml" />
+      <module fileurl="file://$PROJECT_DIR$/model-config/model-config.iml" filepath="$PROJECT_DIR$/model-config/model-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poc/poc.iml" filepath="$PROJECT_DIR$/poc/poc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registry/registry.iml" filepath="$PROJECT_DIR$/registry/registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/train/train.iml" filepath="$PROJECT_DIR$/train/train.iml" />
+    </modules>
+  </component>
+</project>

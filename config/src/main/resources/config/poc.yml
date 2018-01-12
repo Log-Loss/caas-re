@@ -1,0 +1,63 @@
+
+server:
+  port: 8081
+
+
+spring:
+  application:
+    name: poc
+  datasource:
+    driverClassName:
+      com.mysql.jdbc.Driver
+    url:
+      jdbc:mysql://localhost:3306/caas?useSSL=false
+    username:
+      caas
+    password:
+      caas
+  jpa:
+    database: mysql
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: create-drop
+
+#  datasource:
+#    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/oauth2?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: root
+#    driver-class-name: net.sf.log4jdbc.DriverSpy
+  redis:
+    host: 127.0.0.1
+    database: 0
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+
+#logging:
+#  level:
+#    jdbc: error
+#    jdbc.sqltiming: info
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+
+debug: true
+
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10     # 心跳间隔（秒），默认30s
+    leaseExpirationDurationInSeconds: 30  # 失效时间，默认90s，如果服务在指定的 失效时间 内仍没有发起心跳请求，将会被剔除EurekaServer
+    prefer-ip-address: true               # 实例名称显示IP配置（与instance-id配合使用）
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}  # 将InstanceID设置为 IP:Port 形式
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+    healthcheck:
+      enable: true     # 将 actuator health中的健康状态传播到Eureka Server
