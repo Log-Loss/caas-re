@@ -35,7 +35,7 @@ public class Dataset {
 
     public static DataConfig getDataConfig(String dataset) {
         switch (dataset) {
-            case "minst":
+            case "mnist":
                 return new Dataset().MNISTConfig;
             case "iris":
                 return new Dataset().IrisConfig;

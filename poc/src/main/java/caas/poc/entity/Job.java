@@ -30,7 +30,7 @@ public class Job {
     @Column(columnDefinition = "TEXT")
     public String message;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "LONGTEXT")
     public String state;
 
     public Date createTime;
